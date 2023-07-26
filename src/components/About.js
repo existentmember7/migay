@@ -5,6 +5,7 @@ import React, { useState } from "react";
 
 export default function About() {
     const [name, setName] = React.useState("");
+    const [clickme, setClickme] = React.useState("");
     const [score, setScore] = useState(0);
 
     const [checked_1, setChecked_1] = React.useState(false);
@@ -65,6 +66,7 @@ export default function About() {
         }else{
             setScore((3 + checked_1+checked_2+checked_3+checked_4+checked_5+checked_6+checked_7)*100/10);
         };
+        setClickme("Click me!")
     }
         
         // fetch("/", {
@@ -106,7 +108,7 @@ export default function About() {
           />
         </div>
       </div>
-      <div className="container mx-auto flex px-10 py-10 md:flex-row flex-col items-center">
+      <div className="container mx-auto flex px-10 py-0 md:flex-row flex-col items-center">
         <h1 className="title-font sm:text-base text-base mb-4 font-medium text-white">
             1. Have you ever had any same-sex fantasies or thoughts?<br /><br />
                 <p className="mb-8 leading-relaxed">
@@ -301,7 +303,7 @@ export default function About() {
             </button>
             <a href="https://www.instagram.com/reel/CuPDDfUxOGZ/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==">
                 <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-white justify-center">
-                    &nbsp;&nbsp;&nbsp;&nbsp;{name} You are {score}% gay. (click me!)
+                    &nbsp;&nbsp;&nbsp;&nbsp;{name} You are {score}% gay. {clickme}
                 </h1>
             </a>
         </div>
