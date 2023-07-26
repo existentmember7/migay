@@ -87,7 +87,7 @@ export default function About() {
         <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">
             Questions:
         </h1>
-        <p className="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">
+        <h1 className="text-base sm:text-4xl text-3xl mb-4 font-medium text-white">
             1. Have you ever had any same-sex fantasies or thoughts?<br /><br />
                 <label>
                     <input
@@ -97,7 +97,7 @@ export default function About() {
                     />
                     Yes
                 </label>
-            </p>
+            </h1>
         </div>
         <div className="container mx-auto flex px-10 py-20 md:flex-row flex-col items-center">
         <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">
@@ -213,19 +213,6 @@ export default function About() {
               name="email"
               className="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
               onChange={(e) => setEmail(e.target.value)}
-            />
-          </div>
-          <div className="relative mb-4">
-            <label
-              htmlFor="message"
-              className="leading-7 text-sm text-gray-400">
-              Message
-            </label>
-            <textarea
-              id="message"
-              name="message"
-              className="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 h-32 text-base outline-none text-gray-100 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
-              onChange={(e) => setMessage(e.target.value)}
             />
           </div>
           <button
