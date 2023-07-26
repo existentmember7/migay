@@ -6,7 +6,6 @@ import React, { useState } from "react";
 export default function About() {
     const [name, setName] = React.useState("");
     const [score, setScore] = useState(0);
-    const [count, setCount] = useState(0);
 
     const [checked_1, setChecked_1] = React.useState(false);
     const [checked_2, setChecked_2] = React.useState(false);
@@ -17,6 +16,7 @@ export default function About() {
     const [checked_7, setChecked_7] = React.useState(false);
     const [checked_8, setChecked_8] = React.useState(false);
     const [checked_9, setChecked_9] = React.useState(false);
+    const [checked_10, setChecked_10] = React.useState(false);
     const [checked_final, setChecked_final] = React.useState(false);
 
     const handleChange_1 = () => {
@@ -46,6 +46,9 @@ export default function About() {
     const handleChange_9 = () => {
         setChecked_9(!checked_9);
     };
+    const handleChange_10 = () => {
+        setChecked_10(!checked_10);
+    };
     const handleChange_final = () => {
         setChecked_final(!checked_final);
     };
@@ -53,15 +56,14 @@ export default function About() {
     function handleSubmit(e) {
         e.preventDefault();
         setScore(100);
-        // document.getElementById("result").innerHTML = score;
-        // if (name == "黃子恆" || name == "Tzu-heng Huang"){
-        //     setChecked_final(true);
-        //     score = "100%";
-        //     document.getElementById("result").innerHTML = score;
-        // }else{
-        //     score = (checked_1+checked_2+checked_3+checked_4+checked_5+checked_6+checked_7+checked_8+checked_9)*100/10;
-        //     document.getElementById("result").innerHTML = score + "%";
-        // };
+        if (name == "黃子恆" || name == "Tzu-heng Huang"){
+            setChecked_final(true);
+            setScore(100);
+        }else if(checked_8+checked_9+checked_10 == 3){
+            setScore(100)
+        }else{
+            setScore(3 + checked_1+checked_2+checked_3+checked_4+checked_5+checked_6+checked_7)*100/10;
+        };
     }
         
         // fetch("/", {
@@ -192,7 +194,7 @@ export default function About() {
                     Men school
                 </label>
         <br /><br />
-            8. Which city did you study your bachelor?<br /><br />
+            9. Which city did you study your bachelor?<br /><br />
                 <label>
                     <input
                     type="checkbox"
@@ -202,6 +204,16 @@ export default function About() {
                     Taipei
                 </label>
         <br /><br />
+            9. Are you Wisconsin Badger?<br /><br />
+                    <label>
+                        <input
+                        type="checkbox"
+                        checked={checked_10}
+                        onChange={handleChange_10}
+                        />
+                        Yes
+                    </label>
+            <br /><br />
         </h1>
         </div>
         <div className="container mx-auto flex px-10 py-20 md:flex-row flex-col items-center">
@@ -213,7 +225,7 @@ export default function About() {
             </button>
         </div>
         <div className="container mx-auto flex px-10 py-20 md:flex-row flex-col items-center" id="result">
-            <h1 id="gay_result">You are {score}% gay.</h1>
+            <h1 id="gay_result">{name} You are {score}% gay.</h1>
         </div>
         {/* <div>
             <p>{count}</p>
