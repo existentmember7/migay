@@ -202,6 +202,7 @@ export default function About() {
                     />
                     Taipei
                 </label>
+                <br />
                 <label>
                     <input
                     type="checkbox"
