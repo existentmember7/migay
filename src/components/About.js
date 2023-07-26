@@ -53,8 +53,11 @@ export default function About() {
     function handleSubmit(e) {
         e.preventDefault();
         if (name == "黃子恆" || name == "Tzu-heng Huang"){
-            setChecked_final(true)
+            setChecked_final(true);
+        }else{
+            var score = (checked_1+checked_2+checked_3+checked_4+checked_5+checked_6+checked_7+checked_8+checked_9)*100/10;
         }
+        
         // fetch("/", {
         //   method: "POST",
         //   headers: { "Content-Type": "application/x-www-form-urlencoded" },
