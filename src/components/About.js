@@ -20,7 +20,6 @@ export default function About() {
     const [checked_8, setChecked_8] = React.useState(false);
     const [checked_9, setChecked_9] = React.useState(false);
     const [checked_10, setChecked_10] = React.useState(false);
-    const [checked_final, setChecked_final] = React.useState(false);
 
     const handleChange_1 = () => {
         setChecked_1(!checked_1);
@@ -52,22 +51,19 @@ export default function About() {
     const handleChange_10 = () => {
         setChecked_10(!checked_10);
     };
-    const handleChange_final = () => {
-        setChecked_final(!checked_final);
-    };
       
     function handleSubmit(e) {
         e.preventDefault();
+        setScore(0);
         if (name == ""){
             alert("Please enter your name.");
         }else if (name == "黃子恆" || name == "Tzu-heng Huang" || name == "Brain Huang"|| name == "Brain"){
-            setChecked_final(true);
             setScore(100);
-            setClickme(name + ", you are now" + score.toString() + "% Click me!")
+            setClickme(name + ", you are " + score.toString() + "% Click me!")
             seturl("https://www.instagram.com/reel/CuPDDfUxOGZ/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==")
         }else if(checked_8+checked_9+checked_10 == 3){
             setScore(100)
-            setClickme(name + ", you are now" + score.toString() + "% Click me!")
+            setClickme(name + ", you are " + score.toString() + "% Click me!")
             seturl("https://www.instagram.com/reel/CuPDDfUxOGZ/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==")
         }else{
             setScore((3 + checked_1+checked_2+checked_3+checked_4+checked_5+checked_6+checked_7)*100/10);
@@ -283,7 +279,7 @@ export default function About() {
                     &nbsp;&nbsp;Other
                 </label>
         <br /><br />
-            9. Are you Wisconsin Badger?<br /><br />
+            10. Are you Wisconsin Badger?<br /><br />
                     <label>
                         <input
                         type="checkbox"
