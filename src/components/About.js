@@ -60,19 +60,15 @@ export default function About() {
         }else{
             if (name == "子恆" || name == "黃子恆" || name == "Tzu-heng Huang" || name == "Brian Huang" || name == "Brian" || name == "brian"){
                 setScore(100)
-                    .then(()=>{setClickme("Hey " + name + ", you are " + score.toString() + "% gay! Click me!")});
-                seturl("https://www.instagram.com/reel/CuPDDfUxOGZ/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==");
             }else{
                 if((checked_8+checked_9+checked_10) == 3){
                     setScore(100);
-                    setClickme("Hey " + name + ", you are " + score.toString() + "% gay! Click me!");
-                    seturl("https://www.instagram.com/reel/CuPDDfUxOGZ/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==");
                 }else{
                     setScore((3 + checked_1+checked_2+checked_3+checked_4+checked_5+checked_6+checked_7)*100/10);
-                    setClickme("Hey " + name + ", you are " + score.toString() + "% gay! Click me!");
-                    seturl("https://www.instagram.com/reel/CuPDDfUxOGZ/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==");
                 };
             }
+            setClickme("Hey " + name + ", you are " + score.toString() + "% gay! Click me!");
+            seturl("https://www.instagram.com/reel/CuPDDfUxOGZ/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==");
         }
     }
         
@@ -99,7 +95,7 @@ export default function About() {
               className="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
               onChange={(e) => setName(e.target.value)}
             />
-            <br className="hidden lg:inline-block" /> Is me what I think it is? Want to understand yourself even better? try this questionary.
+            <br className="hidden lg:inline-block" /> Is I what I think it is? Want to understand yourself even better? try this questionnaire.
             apps.
           </h1>
           <p className="mb-8 leading-relaxed">
