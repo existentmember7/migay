@@ -44,9 +44,30 @@ export default function About() {
           />
         </div> */}
       </div>
-      <div>
+      <div className="container mx-auto flex px-10 py-20 md:flex-row flex-col items-center">
         <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">
             Questions:
+        </h1>
+        <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">
+            Have you ever had any same-sex fantasies or thoughts?
+        </h1>
+        <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">
+            How comfortable are you with your body and physical intimacy with different genders?
+        </h1>
+        <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">
+            Have you considered seeking support from a therapist, counselor, or support group to explore your sexual orientation further?
+        </h1>
+        <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">
+            Have you ever questioned or explored your sexual identity in the past?
+        </h1>
+        <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">
+            Have you ever felt a romantic or sexual attraction towards someone of the same gender
+        </h1>
+        <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">
+            Do you feel confident in your understanding of your sexual orientation?
+        </h1>
+        <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">
+            Do you believe that understanding your sexual orientation is important for your personal growth and happiness?
         </h1>
       </div>
       <div className="container mx-auto flex px-10 py-20 md:flex-row flex-col items-center">
