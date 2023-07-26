@@ -5,8 +5,8 @@ import React from "react";
 
 export default function About() {
     const [name, setName] = React.useState("");
-    const [email, setEmail] = React.useState("");
-    const [message, setMessage] = React.useState("");
+    const [score, setScore] = useState(0);
+    const [count, setCount] = useState(0);
 
     const [checked_1, setChecked_1] = React.useState(false);
     const [checked_2, setChecked_2] = React.useState(false);
@@ -50,11 +50,11 @@ export default function About() {
         setChecked_final(!checked_final);
     };
 
-    var score = "0%";
+    setScore(100);
       
     function handleSubmit(e) {
         e.preventDefault();
-        score = "You are 100% gay.";
+        score = 100;
         // document.getElementById("result").innerHTML = score;
         // if (name == "黃子恆" || name == "Tzu-heng Huang"){
         //     setChecked_final(true);
@@ -215,7 +215,7 @@ export default function About() {
             </button>
         </div>
         <div className="container mx-auto flex px-10 py-20 md:flex-row flex-col items-center" id="result">
-            <h1 id="gay_result">You are {score} gay.</h1>
+            <h1 id="gay_result">You are {score}% gay.</h1>
         </div>
         <div>
       <p>{count}</p>
