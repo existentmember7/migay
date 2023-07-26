@@ -44,7 +44,12 @@ export default function About() {
           />
         </div> */}
       </div>
-      <div className="relative mb-4">
+      <div>
+        <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">
+            Questions:
+        </h1>
+      </div>
+      <div className="container mx-auto flex px-10 py-20 md:flex-row flex-col items-center">
             <label htmlFor="email" className="leading-7 text-sm text-gray-400">
               Email
             </label>
