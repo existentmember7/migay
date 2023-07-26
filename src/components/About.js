@@ -64,22 +64,22 @@ export default function About() {
                 if((checked_8+checked_9+checked_10) == 3){
                     setScore(100);
                 }else{
-                    setScore((3 + checked_1+checked_2+checked_3+checked_4+checked_5+checked_6+checked_7)*100/10);
+                    if (checked_1+checked_2+checked_3+checked_4+checked_5+checked_6+checked_7 == 0){
+                        setScore(0);
+                    }else{
+                        setScore((3 + checked_1+checked_2+checked_3+checked_4+checked_5+checked_6+checked_7)*100/10);
+                    }
                 };
             }
-            setClickme("Hey " + name + ", you are " + score.toString() + "% gay! Click me!");
-            seturl("https://www.instagram.com/reel/CuPDDfUxOGZ/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==");
+            // setClickme("Hey " + name + ", you are " + score.toString() + "% gay! Click me!");
+            // seturl("https://www.instagram.com/reel/CuPDDfUxOGZ/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==");
         }
     }
-        
-        // fetch("/", {
-        //   method: "POST",
-        //   headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        //   body: encode({ "form-name": "contact", name, email, message }),
-        // })
-        //   .then(() => alert("Message sent!"))
-        //   .catch((error) => alert(error));
-        // }
+
+    function show_result(){
+        setClickme("Hey " + name + ", you are " + score.toString() + "% gay! Click me!");
+        seturl("https://www.instagram.com/reel/CuPDDfUxOGZ/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==");
+    }
 
     
   return (
@@ -301,7 +301,7 @@ export default function About() {
             <button
                 type="submit"
                 className="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg justify-center"
-                onClick={(e)=>handleSubmit(e)}>
+                onClick={(e)=>handleSubmit(e).then(()=>show_result())}>
                 Submit
             </button>
         </div>
