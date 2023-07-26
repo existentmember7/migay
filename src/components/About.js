@@ -10,9 +10,9 @@ export default function About() {
 
     useEffect(() => {
         // Perform any action you want here, like showing an alert or logging the value.
-        show_result()
-        console.log("clickme state has changed:", clickme);
-    }, [clickme]);
+        show_result();
+        console.log("score state has changed:", score);
+    }, [score]);
     
 
     const [checked_1, setChecked_1] = React.useState(false);
