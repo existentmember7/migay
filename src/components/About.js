@@ -7,7 +7,7 @@ export default function About() {
     const [name, setName] = React.useState("");
     const [email, setEmail] = React.useState("");
     const [message, setMessage] = React.useState("");
-    name = "Please enter your name"
+    name = setName("Please enter your name");
 
     function encode(data) {
         return Object.keys(data)
