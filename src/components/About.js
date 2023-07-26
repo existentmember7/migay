@@ -5,8 +5,9 @@ import React, { useState } from "react";
 
 export default function About() {
     const [name, setName] = React.useState("");
-    const [clickme, setClickme] = React.useState("");
+    const [clickme, setClickme] = React.useState("Hit submit to see the result!");
     const [score, setScore] = useState(0);
+    
 
     const [checked_1, setChecked_1] = React.useState(false);
     const [checked_2, setChecked_2] = React.useState(false);
@@ -66,7 +67,7 @@ export default function About() {
         }else{
             setScore((3 + checked_1+checked_2+checked_3+checked_4+checked_5+checked_6+checked_7)*100/10);
         };
-        setClickme("Click me!")
+        setClickme(name + ", you are now" + {score} + "% Click me!")
     }
         
         // fetch("/", {
