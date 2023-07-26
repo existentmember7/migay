@@ -106,7 +106,7 @@ export default function About() {
           />
         </div>
       </div>
-      <div className="container mx-auto flex px-10 py-20 md:flex-row flex-col items-center">
+      <div className="container mx-auto flex px-10 py-10 md:flex-row flex-col items-center">
         <h1 className="title-font sm:text-base text-base mb-4 font-medium text-white">
             1. Have you ever had any same-sex fantasies or thoughts?<br /><br />
                 <p className="mb-8 leading-relaxed">
@@ -292,17 +292,16 @@ export default function About() {
                 </label>
         </h1>
         </div>
-        <div className="container mx-auto flex px-10 py-0 md:flex-row flex-col items-center">
+        <div className="container mx-auto flex px-10 py-20 md:flex-row flex-col items-center">
             <button
                 type="submit"
                 className="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg justify-center"
                 onClick={(e)=>handleSubmit(e)}>
                 Submit
             </button>
-            <br /><br />
             <a href="https://www.instagram.com/reel/CuPDDfUxOGZ/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==">
                 <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-white justify-center">
-                    {name} You are {score}% gay. (click me!)
+                    &nbsp;&nbsp;&nbsp;&nbsp;{name} You are {score}% gay. (click me!)
                 </h1>
             </a>
         </div>
