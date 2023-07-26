@@ -295,12 +295,12 @@ export default function About() {
         <div className="container mx-auto flex px-10 py-20 md:flex-row flex-col items-center text-center">
             <button
                 type="submit"
-                className="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg text-center"
+                className="text-white bg-indigo-500 focus:outline-none hover:bg-indigo-600 rounded text-lg text-center"
                 onClick={(e)=>handleSubmit(e)}>
                 Submit
             </button>
         </div>
-        <div className="container mx-auto flex px-10 py-20 md:flex-row flex-col items-center" id="result">
+        <div className="container mx-auto flex  md:flex-row flex-col items-center text-center">
             <a href="https://www.instagram.com/reel/CuPDDfUxOGZ/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==">
                 <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-white justify-center">
                     {name} You are {score}% gay. (click me!)
