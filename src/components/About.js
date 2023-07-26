@@ -109,6 +109,7 @@ export default function About() {
             Questions:
         <br />
             1. Have you ever had any same-sex fantasies or thoughts?<br /><br />
+                <p className="mb-8 leading-relaxed">
                 <label>
                     <input
                     type="checkbox"
@@ -117,8 +118,10 @@ export default function About() {
                     />
                     Yes
                 </label>
+                </p>
         <br /><br />
             2. How comfortable are you with your body and physical intimacy with different genders?<br /><br />
+                <p className="mb-8 leading-relaxed">
                 <label>
                     <input
                     type="checkbox"
@@ -127,8 +130,10 @@ export default function About() {
                     />
                     Yes
                 </label>
+                </p>
         <br /><br />
             3. Have you considered seeking support from a therapist, counselor, or support group to explore your sexual?<br /><br />
+                <p className="mb-8 leading-relaxed">
                 <label>
                     <input
                     type="checkbox"
@@ -137,7 +142,7 @@ export default function About() {
                     />
                     Yes
                 </label>
-            
+                </p>
         <br /><br />
             4. Have you ever questioned or explored your sexual identity in the past?<br /><br />
                 <label>
