@@ -100,10 +100,7 @@ export default function About() {
                     />
                     Yes
                 </label>
-            </h1>
-        </div>
-        <div className="container mx-auto flex px-10 py-20 md:flex-row flex-col items-center">
-        <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">
+        <br />
             2. How comfortable are you with your body and physical intimacy with different genders?<br /><br />
                 <label>
                     <input
@@ -113,23 +110,8 @@ export default function About() {
                     />
                     Yes
                 </label>
-            </h1>
-        </div>
-        <div className="container mx-auto flex px-10 py-20 md:flex-row flex-col items-center">
-        <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">
-            3. Have you considered seeking support from a therapist, counselor, or support group to explore your sexual orientation further?<br /><br />
-                <label>
-                    <input
-                    type="checkbox"
-                    checked={checked_9}
-                    onChange={handleChange_9}
-                    />
-                    Yes
-                </label>
-            </h1>
-        </div>
-        <div className="container mx-auto flex px-10 py-20 md:flex-row flex-col items-center">
-        <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">
+            
+        <br />
             4. Have you ever questioned or explored your sexual identity in the past?<br /><br />
                 <label>
                     <input
@@ -139,23 +121,8 @@ export default function About() {
                     />
                     Yes
                 </label>
-            </h1>
-        </div>
-        <div className="container mx-auto flex px-10 py-20 md:flex-row flex-col items-center">
-        <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">
-            5. Have you ever felt a romantic or sexual attraction towards someone of the same gender<br /><br />
-                <label>
-                    <input
-                    type="checkbox"
-                    checked={checked_9}
-                    onChange={handleChange_9}
-                    />
-                    Yes
-                </label>
-            </h1>
-        </div>
-        <div className="container mx-auto flex px-10 py-20 md:flex-row flex-col items-center">
-        <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">
+            
+        <br />
             6. Do you feel confident in your understanding of your sexual orientation?<br /><br />
                 <label>
                     <input
@@ -165,23 +132,8 @@ export default function About() {
                     />
                     Yes
                 </label>
-            </h1>
-        </div>
-        <div className="container mx-auto flex px-10 py-20 md:flex-row flex-col items-center">
-        <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">
-            7. Do you believe that understanding your sexual orientation is important for your personal growth and happiness?<br /><br />
-                <label>
-                    <input
-                    type="checkbox"
-                    checked={checked_9}
-                    onChange={handleChange_9}
-                    />
-                    Yes
-                </label>
-            </h1>
-        </div>
-        <div className="container mx-auto flex px-10 py-20 md:flex-row flex-col items-center">
-        <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">
+            
+        <br />
             8. Which types of high school did you attend?<br /><br />
                 <label>
                     <input
@@ -191,20 +143,8 @@ export default function About() {
                     />
                     Yes
                 </label>
-            </h1>
-        </div>
-        <div className="container mx-auto flex px-10 py-20 md:flex-row flex-col items-center">
-            <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">
-                9. Which city did you study your bachelor?<br /><br />
-                <label>
-                    <input
-                    type="checkbox"
-                    checked={checked_9}
-                    onChange={handleChange_9}
-                    />
-                    Yes
-                </label>
-            </h1>
+            
+        <br />
         </div>
         <div className="container mx-auto flex px-10 py-20 md:flex-row flex-col items-center">
             <button
