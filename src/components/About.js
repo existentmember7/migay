@@ -86,7 +86,9 @@ export default function About() {
       <div className="container mx-auto flex px-10 py-20 md:flex-row flex-col items-center">
         <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">
             Questions:
-        </h1><br />
+        </h1>
+        </div>
+        <div className="container mx-auto flex px-10 py-20 md:flex-row flex-col items-center">
         <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">
             1. Have you ever had any same-sex fantasies or thoughts?
             <label>
@@ -97,7 +99,9 @@ export default function About() {
                 />
                 Yes
             </label>
-        </h1><br />
+        </h1>
+        </div>
+        <div className="container mx-auto flex px-10 py-20 md:flex-row flex-col items-center">
         <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">
             2. How comfortable are you with your body and physical intimacy with different genders?
         </h1>
@@ -108,7 +112,9 @@ export default function About() {
             onChange={handleChange_2}
             />
             Yes
-        </label><br />
+        </label>
+        </div>
+        <div className="container mx-auto flex px-10 py-20 md:flex-row flex-col items-center">
         <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">
             3. Have you considered seeking support from a therapist, counselor, or support group to explore your sexual orientation further?
         </h1>
@@ -119,7 +125,9 @@ export default function About() {
             onChange={handleChange_3}
             />
             Yes
-        </label><br />
+        </label>
+        </div>
+        <div className="container mx-auto flex px-10 py-20 md:flex-row flex-col items-center">
         <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">
             4. Have you ever questioned or explored your sexual identity in the past?
         </h1>
@@ -130,7 +138,9 @@ export default function About() {
             onChange={handleChange_4}
             />
             Yes
-        </label><br />
+        </label>
+        </div>
+        <div className="container mx-auto flex px-10 py-20 md:flex-row flex-col items-center">
         <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">
             5. Have you ever felt a romantic or sexual attraction towards someone of the same gender
         </h1>
@@ -141,7 +151,9 @@ export default function About() {
             onChange={handleChange_5}
             />
             Yes
-        </label><br />
+        </label>
+        </div>
+        <div className="container mx-auto flex px-10 py-20 md:flex-row flex-col items-center">
         <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">
             6. Do you feel confident in your understanding of your sexual orientation?
         </h1>
@@ -152,7 +164,9 @@ export default function About() {
             onChange={handleChange_6}
             />
             Yes
-        </label><br />
+        </label>
+        </div>
+        <div className="container mx-auto flex px-10 py-20 md:flex-row flex-col items-center">
         <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">
             7. Do you believe that understanding your sexual orientation is important for your personal growth and happiness?
         </h1>
@@ -163,7 +177,9 @@ export default function About() {
             onChange={handleChange_7}
             />
             Yes
-        </label><br />
+        </label>
+        </div>
+        <div className="container mx-auto flex px-10 py-20 md:flex-row flex-col items-center">
         <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">
             8. Which types of high school did you attend?
         </h1>
@@ -174,10 +190,12 @@ export default function About() {
             onChange={handleChange_8}
             />
             Yes
-        </label><br />
+        </label>
+        </div>
+        <div className="container mx-auto flex px-10 py-20 md:flex-row flex-col items-center">
         <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">
             9. Which city did you study your bachelor?
-        </h1>
+        </h1><br />
         <label>
             <input
             type="checkbox"
