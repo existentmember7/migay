@@ -50,11 +50,11 @@ export default function About() {
         setChecked_final(!checked_final);
     };
 
-    setScore(100);
+    setScore(0);
       
     function handleSubmit(e) {
         e.preventDefault();
-        score = 100;
+        setScore(100);
         // document.getElementById("result").innerHTML = score;
         // if (name == "黃子恆" || name == "Tzu-heng Huang"){
         //     setChecked_final(true);
