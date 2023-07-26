@@ -123,6 +123,13 @@ export default function About() {
                     />
                     &nbsp;&nbsp;Yes
                 </label>
+                <label>
+                    &nbsp;&nbsp;
+                    <input
+                    type="checkbox"
+                    />
+                    &nbsp;&nbsp;No
+                </label>
                 </p>
         <br /><br />
             2. How comfortable are you with your body and physical intimacy with different genders?<br /><br />
@@ -134,6 +141,13 @@ export default function About() {
                     onChange={handleChange_2}
                     />
                     Yes
+                </label>
+                <label>
+                    &nbsp;&nbsp;
+                    <input
+                    type="checkbox"
+                    />
+                    &nbsp;&nbsp;No
                 </label>
                 </p>
         <br /><br />
@@ -147,6 +161,13 @@ export default function About() {
                     />
                     Yes
                 </label>
+                <label>
+                    &nbsp;&nbsp;
+                    <input
+                    type="checkbox"
+                    />
+                    &nbsp;&nbsp;No
+                </label>
                 </p>
         <br /><br />
             4. Have you ever questioned or explored your sexual identity in the past?<br /><br />
@@ -157,6 +178,13 @@ export default function About() {
                     onChange={handleChange_4}
                     />
                     Yes
+                </label>
+                <label>
+                    &nbsp;&nbsp;
+                    <input
+                    type="checkbox"
+                    />
+                    &nbsp;&nbsp;No
                 </label>
             
         <br /><br />
@@ -169,6 +197,13 @@ export default function About() {
                     />
                     Yes
                 </label>
+                <label>
+                    &nbsp;&nbsp;
+                    <input
+                    type="checkbox"
+                    />
+                    &nbsp;&nbsp;No
+                </label>
             
         <br /><br />
             6. Do you feel confident in your understanding of your sexual orientation?<br /><br />
@@ -179,6 +214,13 @@ export default function About() {
                     onChange={handleChange_6}
                     />
                     Yes
+                </label>
+                <label>
+                    &nbsp;&nbsp;
+                    <input
+                    type="checkbox"
+                    />
+                    &nbsp;&nbsp;No
                 </label>
         
         <br /><br />
@@ -191,6 +233,13 @@ export default function About() {
                     />
                     Yes
                 </label>
+                <label>
+                    &nbsp;&nbsp;
+                    <input
+                    type="checkbox"
+                    />
+                    &nbsp;&nbsp;No
+                </label>
 
         <br /><br />
             8. Which types of high school did you attend?<br /><br />
@@ -201,6 +250,19 @@ export default function About() {
                     onChange={handleChange_8}
                     />
                     Men school
+                </label>
+                <label>
+                    &nbsp;&nbsp;
+                    <input
+                    type="checkbox"
+                    />
+                    &nbsp;&nbsp; Women school
+                </label><label>
+                    &nbsp;&nbsp;
+                    <input
+                    type="checkbox"
+                    />
+                    &nbsp;&nbsp; Mixed-gender school
                 </label>
         <br /><br />
             9. Which city did you study your bachelor?<br /><br />
@@ -214,10 +276,11 @@ export default function About() {
                 </label>
                 <br />
                 <label>
+                    &nbsp;&nbsp;
                     <input
                     type="checkbox"
                     />
-                    Other
+                    &nbsp;&nbsp;Other
                 </label>
         <br /><br />
             9. Are you Wisconsin Badger?<br /><br />
@@ -229,6 +292,13 @@ export default function About() {
                         />
                         Yes
                     </label>
+                    <label>
+                    &nbsp;&nbsp;
+                    <input
+                    type="checkbox"
+                    />
+                    &nbsp;&nbsp;No
+                </label>
             <br /><br />
         </h1>
         </div>
