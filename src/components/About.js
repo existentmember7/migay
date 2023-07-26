@@ -102,9 +102,7 @@ export default function About() {
               className="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
               onChange={(e) => setName(e.target.value)}
             />
-            <br className="hidden lg:inline-block" /> Is I what I think it is?<br />
-            Want to understand yourself even better?
-            <br />try this questionnaire.
+            <br className="hidden lg:inline-block" /> Is I what I think it is? Want to understand yourself even better? try this questionnaire.
           </h1>
           <p className="mb-8 leading-relaxed">
           Embrace the exploration of your sexual orientation, for it leads to self-awareness and a more fulfilling life. 
