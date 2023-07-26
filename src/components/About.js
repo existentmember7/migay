@@ -292,7 +292,7 @@ export default function About() {
                 </label>
         </h1>
         </div>
-        <div className="container mx-auto flex px-10 py-20 md:flex-row flex-col items-center">
+        <div className="container mx-auto flex px-10 py-20 md:flex-row flex-col items-center text-center">
             <button
                 type="submit"
                 className="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg text-center"
