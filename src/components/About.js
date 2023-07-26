@@ -131,7 +131,6 @@ export default function About() {
                     &nbsp;&nbsp;No
                 </label>
                 </p>
-        <br /><br />
             2. How comfortable are you with your body and physical intimacy with different genders?<br /><br />
                 <p className="mb-8 leading-relaxed">
                 <label>
@@ -140,7 +139,7 @@ export default function About() {
                     checked={checked_2}
                     onChange={handleChange_2}
                     />
-                    Yes
+                    &nbsp;&nbsp;Yes
                 </label>
                 <label>
                     &nbsp;&nbsp;
@@ -150,7 +149,6 @@ export default function About() {
                     &nbsp;&nbsp;No
                 </label>
                 </p>
-        <br /><br />
             3. Have you considered seeking support from a therapist, counselor, or support group to explore your sexual?<br /><br />
                 <p className="mb-8 leading-relaxed">
                 <label>
@@ -159,7 +157,7 @@ export default function About() {
                     checked={checked_3}
                     onChange={handleChange_3}
                     />
-                    Yes
+                    &nbsp;&nbsp;Yes
                 </label>
                 <label>
                     &nbsp;&nbsp;
@@ -169,7 +167,7 @@ export default function About() {
                     &nbsp;&nbsp;No
                 </label>
                 </p>
-        <br /><br />
+        <br />
             4. Have you ever questioned or explored your sexual identity in the past?<br /><br />
                 <label>
                     <input
@@ -177,7 +175,7 @@ export default function About() {
                     checked={checked_4}
                     onChange={handleChange_4}
                     />
-                    Yes
+                    &nbsp;&nbsp;Yes
                 </label>
                 <label>
                     &nbsp;&nbsp;
@@ -195,7 +193,7 @@ export default function About() {
                     checked={checked_5}
                     onChange={handleChange_5}
                     />
-                    Yes
+                    &nbsp;&nbsp;Yes
                 </label>
                 <label>
                     &nbsp;&nbsp;
@@ -213,7 +211,7 @@ export default function About() {
                     checked={checked_6}
                     onChange={handleChange_6}
                     />
-                    Yes
+                    &nbsp;&nbsp;Yes
                 </label>
                 <label>
                     &nbsp;&nbsp;
@@ -231,7 +229,7 @@ export default function About() {
                     checked={checked_7}
                     onChange={handleChange_7}
                     />
-                    Yes
+                    &nbsp;&nbsp;Yes
                 </label>
                 <label>
                     &nbsp;&nbsp;
@@ -249,7 +247,7 @@ export default function About() {
                     checked={checked_8}
                     onChange={handleChange_8}
                     />
-                    Men school
+                    &nbsp;&nbsp; Men school
                 </label>
                 <label>
                     &nbsp;&nbsp;
@@ -272,7 +270,7 @@ export default function About() {
                     checked={checked_9}
                     onChange={handleChange_9}
                     />
-                    Taipei
+                    &nbsp;&nbsp; Taipei
                 </label>
                 <br />
                 <label>
@@ -290,7 +288,7 @@ export default function About() {
                         checked={checked_10}
                         onChange={handleChange_10}
                         />
-                        Yes
+                        &nbsp;&nbsp;Yes
                     </label>
                     <label>
                     &nbsp;&nbsp;
