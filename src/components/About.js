@@ -112,10 +112,6 @@ export default function About() {
         </h1>
     </div>
       <div className="container mx-auto flex px-10 py-20 md:flex-row flex-col items-center">
-        <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">
-            Questions:
-        </h1>
-        <br />
         <h1 className="title-font sm:text-base text-base mb-4 font-medium text-white">
             1. Have you ever had any same-sex fantasies or thoughts?<br /><br />
                 <p className="mb-8 leading-relaxed">
