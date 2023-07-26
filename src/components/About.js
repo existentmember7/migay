@@ -51,6 +51,12 @@ export default function About() {
     const handleChange_10 = () => {
         setChecked_10(!checked_10);
     };
+
+
+    function show_result(){
+        setClickme("Hey " + name + ", you are " + score.toString() + "% gay! Click me!");
+        seturl("https://www.instagram.com/reel/CuPDDfUxOGZ/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==");
+    }
       
     function handleSubmit(e) {
         e.preventDefault();
@@ -71,14 +77,10 @@ export default function About() {
                     }
                 };
             }
+            show_result();
             // setClickme("Hey " + name + ", you are " + score.toString() + "% gay! Click me!");
             // seturl("https://www.instagram.com/reel/CuPDDfUxOGZ/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==");
         }
-    }
-
-    function show_result(){
-        setClickme("Hey " + name + ", you are " + score.toString() + "% gay! Click me!");
-        seturl("https://www.instagram.com/reel/CuPDDfUxOGZ/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==");
     }
 
     
@@ -301,7 +303,7 @@ export default function About() {
             <button
                 type="submit"
                 className="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg justify-center"
-                onClick={(e)=>handleSubmit(e).then(()=>show_result())}>
+                onClick={(e)=>handleSubmit(e)}>
                 Submit
             </button>
         </div>
