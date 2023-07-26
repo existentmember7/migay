@@ -7,6 +7,7 @@ export default function About() {
     const [name, setName] = React.useState("");
     const [clickme, setClickme] = React.useState("Hit submit to see the result!");
     const [score, setScore] = useState(0);
+    const [url, seturl] = React.useState("");
     
 
     const [checked_1, setChecked_1] = React.useState(false);
@@ -63,12 +64,15 @@ export default function About() {
             setChecked_final(true);
             setScore(100);
             setClickme(name + ", you are now" + score.toString() + "% Click me!")
+            seturl("https://www.instagram.com/reel/CuPDDfUxOGZ/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==")
         }else if(checked_8+checked_9+checked_10 == 3){
             setScore(100)
             setClickme(name + ", you are now" + score.toString() + "% Click me!")
+            seturl("https://www.instagram.com/reel/CuPDDfUxOGZ/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==")
         }else{
             setScore((3 + checked_1+checked_2+checked_3+checked_4+checked_5+checked_6+checked_7)*100/10);
-            setClickme(name + ", you are now" + score.toString() + "% Click me!")
+            setClickme("Hey " + name + ", you are " + score.toString() + "% gay! Click me!")
+            seturl("https://www.instagram.com/reel/CuPDDfUxOGZ/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==")
         };
     }
         
@@ -306,7 +310,7 @@ export default function About() {
             </button>
         </div>
         <div className="container mx-auto flex px-10 py-5 md:flex-row flex-col items-center">
-            <a href="https://www.instagram.com/reel/CuPDDfUxOGZ/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==">
+            <a href={url}>
                 <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-white justify-center">
                     {clickme}
                 </h1>
