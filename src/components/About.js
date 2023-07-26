@@ -299,8 +299,7 @@ export default function About() {
                 onClick={(e)=>handleSubmit(e)}>
                 Submit
             </button>
-        </div>
-        <div className="container mx-auto flex px-10 py-20 md:flex-row flex-col items-center" id="result">
+            <br />
             <a href="https://www.instagram.com/reel/CuPDDfUxOGZ/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==">
                 <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-white justify-center">
                     {name} You are {score}% gay. (click me!)
