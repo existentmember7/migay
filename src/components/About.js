@@ -1,13 +1,17 @@
 // src/components/About.js
 
-import React, { useState } from "react";
-
+import React, { useState, useEffect } from "react";
 
 export default function About() {
     const [name, setName] = React.useState("");
     const [clickme, setClickme] = React.useState("Hit submit to see the result!");
     const [score, setScore] = useState(0);
     const [url, seturl] = React.useState("");
+
+    useEffect(() => {
+        // Perform any action you want here, like showing an alert or logging the value.
+        console.log("clickme state has changed:", clickme);
+    }, [clickme]);
     
 
     const [checked_1, setChecked_1] = React.useState(false);
@@ -54,9 +58,6 @@ export default function About() {
 
 
     function show_result(){
-        setTimeout(function(){
-            console.log("Executed after 1 second");
-        }, 1000);
         setClickme("Hey " + name + ", you are " + score.toString() + "% gay! Click me!");
         seturl("https://www.instagram.com/reel/CuPDDfUxOGZ/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==");
     }
@@ -69,23 +70,18 @@ export default function About() {
         }else{
             if (name == "子恆" || name == "黃子恆" || name == "Tzu-heng Huang" || name == "Brian Huang" || name == "Brian" || name == "brian"){
                 setScore(100);
-                show_result();
             }else{
                 if((checked_8+checked_9+checked_10) == 3){
                     setScore(100);
-                    show_result();
                 }else{
                     if (checked_1+checked_2+checked_3+checked_4+checked_5+checked_6+checked_7 == 0){
                         setScore(0);
-                        show_result();
                     }else{
                         setScore((3 + checked_1+checked_2+checked_3+checked_4+checked_5+checked_6+checked_7)*100/10);
-                        show_result();
                     }
                 };
             }
-            // setClickme("Hey " + name + ", you are " + score.toString() + "% gay! Click me!");
-            // seturl("https://www.instagram.com/reel/CuPDDfUxOGZ/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==");
+            show_result();
         }
     }
 
