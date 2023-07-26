@@ -59,11 +59,11 @@ export default function About() {
             alert("Please enter your name.");
         }else if (name == "黃子恆" || name == "Tzu-heng Huang" || name == "Brain Huang"|| name == "Brain"){
             setScore(100);
-            setClickme(name + ", you are " + score.toString() + "% Click me!")
+            setClickme("Hey " + name + ", you are " + score.toString() + "% gay! Click me!")
             seturl("https://www.instagram.com/reel/CuPDDfUxOGZ/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==")
-        }else if(checked_8+checked_9+checked_10 == 3){
+        }else if((checked_8+checked_9+checked_10) == 3){
             setScore(100)
-            setClickme(name + ", you are " + score.toString() + "% Click me!")
+            setClickme("Hey " + name + ", you are " + score.toString() + "% gay! Click me!")
             seturl("https://www.instagram.com/reel/CuPDDfUxOGZ/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==")
         }else{
             setScore((3 + checked_1+checked_2+checked_3+checked_4+checked_5+checked_6+checked_7)*100/10);
