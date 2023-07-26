@@ -8,6 +8,45 @@ export default function About() {
     const [email, setEmail] = React.useState("");
     const [message, setMessage] = React.useState("");
 
+    const [checked_1, setChecked_1] = React.useState(false);
+    const [checked_2, setChecked_2] = React.useState(false);
+    const [checked_3, setChecked_3] = React.useState(false);
+    const [checked_4, setChecked_4] = React.useState(false);
+    const [checked_5, setChecked_5] = React.useState(false);
+    const [checked_6, setChecked_6] = React.useState(false);
+    const [checked_7, setChecked_7] = React.useState(false);
+    const [checked_8, setChecked_8] = React.useState(false);
+    const [checked_9, setChecked_9] = React.useState(false);
+
+    const handleChange_1 = () => {
+        setChecked_1(!checked_1);
+      };
+    const handleChange_2 = () => {
+        setChecked_2(!checked_2);
+    };
+    const handleChange_3 = () => {
+        setChecked_3(!checked_3);
+    };
+    const handleChange_4 = () => {
+        setChecked_4(!checked_4);
+    };
+    const handleChange_5 = () => {
+        setChecked_5(!checked_5);
+    };
+    const handleChange_6 = () => {
+        setChecked_6(!checked_6);
+    };
+    const handleChange_7 = () => {
+        setChecked_7(!checked_7);
+    };
+    const handleChange_8 = () => {
+        setChecked_8(!checked_8);
+    };
+    const handleChange_9 = () => {
+        setChecked_9(!checked_9);
+    };
+      
+
     function encode(data) {
         return Object.keys(data)
         .map(
@@ -51,45 +90,53 @@ export default function About() {
         </div>
         <div className="container mx-auto flex px-10 py-20 md:flex-row flex-col items-center">
         <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">
-            Have you ever had any same-sex fantasies or thoughts?
+            1. Have you ever had any same-sex fantasies or thoughts?
+            <label>
+                <input
+                type="checkbox"
+                checked={checked}
+                onChange={handleChange}
+                />
+                Yes
+            </label>
         </h1>
         </div>
         <div className="container mx-auto flex px-10 py-20 md:flex-row flex-col items-center">
         <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">
-            How comfortable are you with your body and physical intimacy with different genders?
+            2. How comfortable are you with your body and physical intimacy with different genders?
         </h1>
         </div>
         <div className="container mx-auto flex px-10 py-20 md:flex-row flex-col items-center">
         <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">
-            Have you considered seeking support from a therapist, counselor, or support group to explore your sexual orientation further?
+            3. Have you considered seeking support from a therapist, counselor, or support group to explore your sexual orientation further?
         </h1>
         </div>
         <div className="container mx-auto flex px-10 py-20 md:flex-row flex-col items-center">
         <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">
-            Have you ever questioned or explored your sexual identity in the past?
+            4. Have you ever questioned or explored your sexual identity in the past?
         </h1>
         </div>
         <div className="container mx-auto flex px-10 py-20 md:flex-row flex-col items-center">
         <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">
-            Have you ever felt a romantic or sexual attraction towards someone of the same gender
+            5. Have you ever felt a romantic or sexual attraction towards someone of the same gender
         </h1>
         </div>
         <div className="container mx-auto flex px-10 py-20 md:flex-row flex-col items-center">
         <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">
-            Do you feel confident in your understanding of your sexual orientation?
+            6. Do you feel confident in your understanding of your sexual orientation?
         </h1>
         </div>
         <div className="container mx-auto flex px-10 py-20 md:flex-row flex-col items-center">
         <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">
-            Do you believe that understanding your sexual orientation is important for your personal growth and happiness?
+            7. Do you believe that understanding your sexual orientation is important for your personal growth and happiness?
         </h1>
         <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">
-            Which types of high school did you attend?
+            8. Which types of high school did you attend?
         </h1>
         </div>
         <div className="container mx-auto flex px-10 py-20 md:flex-row flex-col items-center">
         <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">
-            Which city did you study your bachelor?
+            9. Which city did you study your bachelor?
         </h1>
         </div>
       <div className="container mx-auto flex px-10 py-20 md:flex-row flex-col items-center">
