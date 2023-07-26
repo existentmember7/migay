@@ -49,8 +49,6 @@ export default function About() {
     const handleChange_final = () => {
         setChecked_final(!checked_final);
     };
-
-    setScore(0);
       
     function handleSubmit(e) {
         e.preventDefault();
