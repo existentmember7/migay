@@ -291,8 +291,9 @@ export default function About() {
                     &nbsp;&nbsp;No
                 </label>
         </h1>
-        <br /><br />
-        <button
+        </div>
+        <div className="container mx-auto flex px-10 py-0 md:flex-row flex-col items-center">
+            <button
                 type="submit"
                 className="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg justify-center"
                 onClick={(e)=>handleSubmit(e)}>
