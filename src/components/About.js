@@ -58,7 +58,8 @@ export default function About() {
         if (name == ""){
             alert("Please enter your name.");
         }else{
-            if (name == "黃子恆" || name == "Tzu-heng Huang" || name == "Brain Huang"|| name == "Brain"){
+            if (name == "子恆" || name == "黃子恆" || name == "Tzu-heng Huang" || name == "Brian Huang" || name == "Brian" || name == "brian"){
+                print("test1")
                 setScore(100);
                 setClickme("Hey " + name + ", you are " + score.toString() + "% gay! Click me!")
                 seturl("https://www.instagram.com/reel/CuPDDfUxOGZ/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==")
