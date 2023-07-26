@@ -7,6 +7,7 @@ export default function About() {
     const [name, setName] = React.useState("");
     const [email, setEmail] = React.useState("");
     const [message, setMessage] = React.useState("");
+    name = "Please enter your name"
 
     function encode(data) {
         return Object.keys(data)
@@ -27,7 +28,7 @@ export default function About() {
               name="name"
               className="w-full bg-gray-800 rounded border border-gray-700 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-900 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
               onChange={(e) => setName(e.target.value)}
-            />Please enter your name<input/>
+            />
             <br className="hidden lg:inline-block" /> Is me what I think it is? Want to understand yourself even better? try this questionary.
             apps.
           </h1>
