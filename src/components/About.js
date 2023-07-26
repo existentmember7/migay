@@ -121,9 +121,30 @@ export default function About() {
                     />
                     Yes
                 </label>
+        <br /><br />
+            3. Have you considered seeking support from a therapist, counselor, or support group to explore your sexual?<br /><br />
+                <label>
+                    <input
+                    type="checkbox"
+                    checked={checked_9}
+                    onChange={handleChange_9}
+                    />
+                    Yes
+                </label>
             
         <br /><br />
             4. Have you ever questioned or explored your sexual identity in the past?<br /><br />
+                <label>
+                    <input
+                    type="checkbox"
+                    checked={checked_9}
+                    onChange={handleChange_9}
+                    />
+                    Yes
+                </label>
+            
+        <br /><br />
+            5. Have you ever felt a romantic or sexual attraction towards someone of the same gender?<br /><br />
                 <label>
                     <input
                     type="checkbox"
@@ -143,7 +164,18 @@ export default function About() {
                     />
                     Yes
                 </label>
-            
+        
+        <br /><br />
+            7. Do you believe that understanding your sexual orientation is important for your personal growth and happiness?<br /><br />
+                <label>
+                    <input
+                    type="checkbox"
+                    checked={checked_9}
+                    onChange={handleChange_9}
+                    />
+                    Yes
+                </label>
+
         <br /><br />
             8. Which types of high school did you attend?<br /><br />
                 <label>
@@ -152,7 +184,17 @@ export default function About() {
                     checked={checked_9}
                     onChange={handleChange_9}
                     />
-                    Yes
+                    Men school
+                </label>
+        <br /><br />
+            8. Which city did you study your bachelor?<br /><br />
+                <label>
+                    <input
+                    type="checkbox"
+                    checked={checked_9}
+                    onChange={handleChange_9}
+                    />
+                    Taipei
                 </label>
             
         <br /><br />
