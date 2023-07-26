@@ -113,6 +113,8 @@ export default function About() {
                 <label>
                     <input
                     type="checkbox"
+                    width="20px"
+                    height="20px"
                     checked={checked_1}
                     onChange={handleChange_1}
                     />
