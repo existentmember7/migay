@@ -84,7 +84,7 @@ export default function About() {
                     }
                 };
             }
-            // show_result();
+            show_result();
         }
     }
 
