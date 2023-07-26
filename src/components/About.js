@@ -56,7 +56,8 @@ export default function About() {
             setChecked_final(true);
         }else{
             var score = (checked_1+checked_2+checked_3+checked_4+checked_5+checked_6+checked_7+checked_8+checked_9)*100/10;
-        }
+        };
+    }
         
         // fetch("/", {
         //   method: "POST",
