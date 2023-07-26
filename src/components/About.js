@@ -145,6 +145,7 @@ export default function About() {
                 </label>
             
         <br />
+        </h1>
         </div>
         <div className="container mx-auto flex px-10 py-20 md:flex-row flex-col items-center">
             <button
