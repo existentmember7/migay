@@ -5,7 +5,7 @@ import React, { useState, useEffect } from "react";
 export default function About() {
     const [name, setName] = React.useState("");
     const [clickme, setClickme] = React.useState("Hit submit to see the result!");
-    const [score, setScore] = useState(0);
+    const [score, setScore] = useState();
     const [url, seturl] = React.useState("");
 
     useEffect(() => {
