@@ -78,7 +78,7 @@ export default function About() {
                     setScore(100);
                 }else{
                     if (checked_1+checked_2+checked_3+checked_4+checked_5+checked_6+checked_7 == 0){
-                        setScore(Math.random().toFixed(2)*10.);
+                        setScore(Math.floor(Math.random()*100)/10);
                     }else{
                         setScore((3 + checked_1+checked_2+checked_3+checked_4+checked_5+checked_6+checked_7)*100/10);
                     }
