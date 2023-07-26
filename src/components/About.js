@@ -103,7 +103,6 @@ export default function About() {
               onChange={(e) => setName(e.target.value)}
             />
             <br className="hidden lg:inline-block" /> Is I what I think it is? Want to understand yourself even better? try this questionnaire.
-            apps.
           </h1>
           <p className="mb-8 leading-relaxed">
           Embrace the exploration of your sexual orientation, for it leads to self-awareness and a more fulfilling life. 
