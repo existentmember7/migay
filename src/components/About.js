@@ -55,7 +55,7 @@ export default function About() {
     function handleSubmit(e) {
         e.preventDefault();
         score = "You are 100% gay.";
-        document.getElementById("result").innerHTML = score;
+        // document.getElementById("result").innerHTML = score;
         // if (name == "黃子恆" || name == "Tzu-heng Huang"){
         //     setChecked_final(true);
         //     score = "100%";
@@ -113,8 +113,8 @@ export default function About() {
                 <label>
                     <input
                     type="checkbox"
-                    checked={checked_9}
-                    onChange={handleChange_9}
+                    checked={checked_1}
+                    onChange={handleChange_1}
                     />
                     Yes
                 </label>
@@ -123,8 +123,8 @@ export default function About() {
                 <label>
                     <input
                     type="checkbox"
-                    checked={checked_9}
-                    onChange={handleChange_9}
+                    checked={checked_2}
+                    onChange={handleChange_2}
                     />
                     Yes
                 </label>
@@ -133,8 +133,8 @@ export default function About() {
                 <label>
                     <input
                     type="checkbox"
-                    checked={checked_9}
-                    onChange={handleChange_9}
+                    checked={checked_3}
+                    onChange={handleChange_3}
                     />
                     Yes
                 </label>
@@ -144,8 +144,8 @@ export default function About() {
                 <label>
                     <input
                     type="checkbox"
-                    checked={checked_9}
-                    onChange={handleChange_9}
+                    checked={checked_4}
+                    onChange={handleChange_4}
                     />
                     Yes
                 </label>
@@ -155,8 +155,8 @@ export default function About() {
                 <label>
                     <input
                     type="checkbox"
-                    checked={checked_9}
-                    onChange={handleChange_9}
+                    checked={checked_5}
+                    onChange={handleChange_5}
                     />
                     Yes
                 </label>
@@ -166,8 +166,8 @@ export default function About() {
                 <label>
                     <input
                     type="checkbox"
-                    checked={checked_9}
-                    onChange={handleChange_9}
+                    checked={checked_6}
+                    onChange={handleChange_6}
                     />
                     Yes
                 </label>
@@ -177,8 +177,8 @@ export default function About() {
                 <label>
                     <input
                     type="checkbox"
-                    checked={checked_9}
-                    onChange={handleChange_9}
+                    checked={checked_7}
+                    onChange={handleChange_7}
                     />
                     Yes
                 </label>
@@ -188,8 +188,8 @@ export default function About() {
                 <label>
                     <input
                     type="checkbox"
-                    checked={checked_9}
-                    onChange={handleChange_9}
+                    checked={checked_8}
+                    onChange={handleChange_8}
                     />
                     Men school
                 </label>
@@ -209,7 +209,8 @@ export default function About() {
         <div className="container mx-auto flex px-10 py-20 md:flex-row flex-col items-center">
             <button
                 type="submit"
-                className="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">
+                className="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg"
+                onClick={handleSubmit()}>
                 Submit
             </button>
         </div>
