@@ -3,6 +3,19 @@
 import React from "react";
 
 export default function About() {
+    const [name, setName] = React.useState("");
+    const [email, setEmail] = React.useState("");
+    const [message, setMessage] = React.useState("");
+  
+    function encode(data) {
+      return Object.keys(data)
+        .map(
+          (key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
+        )
+        .join("&");
+    }
+
+export default function About() {
   return (
     <section id="about">
       <div className="container mx-auto flex px-10 py-20 md:flex-row flex-col items-center">
