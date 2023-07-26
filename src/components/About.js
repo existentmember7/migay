@@ -55,7 +55,9 @@ export default function About() {
       
     function handleSubmit(e) {
         e.preventDefault();
-        if (name == "黃子恆" || name == "Tzu-heng Huang"){
+        if (name == ""){
+            alert("Please enter your name.");
+        }else if (name == "黃子恆" || name == "Tzu-heng Huang"){
             setChecked_final(true);
             setScore(100);
         }else if(checked_8+checked_9+checked_10 == 3){
@@ -116,7 +118,7 @@ export default function About() {
                     checked={checked_1}
                     onChange={handleChange_1}
                     />
-                      Yes
+                    &nbsp;&nbsp;Yes
                 </label>
                 </p>
         <br /><br />
