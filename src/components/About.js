@@ -54,14 +54,16 @@ export default function About() {
       
     function handleSubmit(e) {
         e.preventDefault();
-        if (name == "黃子恆" || name == "Tzu-heng Huang"){
-            setChecked_final(true);
-            score = "100%"
-            document.getElementById("result").innerHTML = score;
-        }else{
-            score = (checked_1+checked_2+checked_3+checked_4+checked_5+checked_6+checked_7+checked_8+checked_9)*100/10;
-            document.getElementById("result").innerHTML = score + "%";
-        };
+        score = "You are 100% gay.";
+        document.getElementById("result").innerHTML = score;
+        // if (name == "黃子恆" || name == "Tzu-heng Huang"){
+        //     setChecked_final(true);
+        //     score = "100%";
+        //     document.getElementById("result").innerHTML = score;
+        // }else{
+        //     score = (checked_1+checked_2+checked_3+checked_4+checked_5+checked_6+checked_7+checked_8+checked_9)*100/10;
+        //     document.getElementById("result").innerHTML = score + "%";
+        // };
     }
         
         // fetch("/", {
@@ -212,7 +214,7 @@ export default function About() {
             </button>
         </div>
         <div className="container mx-auto flex px-10 py-20 md:flex-row flex-col items-center" id="result">
-            <h1>You are \{score} gay.</h1>
+            <h1 id="gay_result">You are {score} gay.</h1>
         </div>
 
     </section>
