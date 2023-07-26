@@ -221,7 +221,6 @@ export default function About() {
       <p>{count}</p>
       <button
         onClick={() => {
-          sayHello();
           setCount(count + 1);
         }}
       >
