@@ -62,12 +62,14 @@ export default function About() {
         }else if (name == "黃子恆" || name == "Tzu-heng Huang" || name == "Brain Huang"|| name == "Brain"){
             setChecked_final(true);
             setScore(100);
+            setClickme(name + ", you are now" + score.toString() + "% Click me!")
         }else if(checked_8+checked_9+checked_10 == 3){
             setScore(100)
+            setClickme(name + ", you are now" + score.toString() + "% Click me!")
         }else{
             setScore((3 + checked_1+checked_2+checked_3+checked_4+checked_5+checked_6+checked_7)*100/10);
+            setClickme(name + ", you are now" + score.toString() + "% Click me!")
         };
-        setClickme(name + ", you are now" + {score} + "% Click me!")
     }
         
         // fetch("/", {
@@ -306,7 +308,7 @@ export default function About() {
         <div className="container mx-auto flex px-10 py-5 md:flex-row flex-col items-center">
             <a href="https://www.instagram.com/reel/CuPDDfUxOGZ/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==">
                 <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-white justify-center">
-                    {name} You are {score}% gay. {clickme}
+                    {clickme}
                 </h1>
             </a>
         </div>
