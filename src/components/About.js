@@ -57,7 +57,7 @@ export default function About() {
         e.preventDefault();
         if (name == ""){
             alert("Please enter your name.");
-        }else if (name == "黃子恆" || name == "Tzu-heng Huang"){
+        }else if (name == "黃子恆" || name == "Tzu-heng Huang" || name == "Brain Huang"|| name == "Brain"){
             setChecked_final(true);
             setScore(100);
         }else if(checked_8+checked_9+checked_10 == 3){
@@ -167,7 +167,6 @@ export default function About() {
                     &nbsp;&nbsp;No
                 </label>
                 </p>
-        <br />
             4. Have you ever questioned or explored your sexual identity in the past?<br /><br />
                 <label>
                     <input
