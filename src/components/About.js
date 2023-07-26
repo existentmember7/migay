@@ -217,16 +217,16 @@ export default function About() {
         <div className="container mx-auto flex px-10 py-20 md:flex-row flex-col items-center" id="result">
             <h1 id="gay_result">You are {score}% gay.</h1>
         </div>
-        <div>
-      <p>{count}</p>
-      <button
-        onClick={() => {
-          setCount(count + 1);
-        }}
-      >
-        Say Hello and Increment
-      </button>
-    </div>
+        {/* <div>
+            <p>{count}</p>
+            <button
+                onClick={() => {
+                setCount(count + 1);
+                }}
+            >
+                Say Hello and Increment
+            </button>
+    </div> */}
     </section>
   );
 }
