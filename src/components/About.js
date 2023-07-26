@@ -10,6 +10,7 @@ export default function About() {
 
     useEffect(() => {
         // Perform any action you want here, like showing an alert or logging the value.
+        show_result()
         console.log("clickme state has changed:", clickme);
     }, [clickme]);
     
@@ -81,7 +82,7 @@ export default function About() {
                     }
                 };
             }
-            show_result();
+            // show_result();
         }
     }
 
