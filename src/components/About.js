@@ -100,7 +100,7 @@ export default function About() {
                     />
                     Yes
                 </label>
-        <br />
+        <br /><br />
             2. How comfortable are you with your body and physical intimacy with different genders?<br /><br />
                 <label>
                     <input
@@ -111,7 +111,7 @@ export default function About() {
                     Yes
                 </label>
             
-        <br />
+        <br /><br />
             4. Have you ever questioned or explored your sexual identity in the past?<br /><br />
                 <label>
                     <input
@@ -122,7 +122,7 @@ export default function About() {
                     Yes
                 </label>
             
-        <br />
+        <br /><br />
             6. Do you feel confident in your understanding of your sexual orientation?<br /><br />
                 <label>
                     <input
@@ -133,7 +133,7 @@ export default function About() {
                     Yes
                 </label>
             
-        <br />
+        <br /><br />
             8. Which types of high school did you attend?<br /><br />
                 <label>
                     <input
@@ -144,7 +144,7 @@ export default function About() {
                     Yes
                 </label>
             
-        <br />
+        <br /><br />
         </h1>
         </div>
         <div className="container mx-auto flex px-10 py-20 md:flex-row flex-col items-center">
