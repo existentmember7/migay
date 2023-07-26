@@ -61,7 +61,7 @@ export default function About() {
 
 
     function show_result(){
-        setClickme("Hey " + name + ", you are " + score.toString() + "% gay! Click me!");
+        setClickme("Hey " + name + ", you are " + score.toString() + "% gay! Click me for more infomation!");
         seturl("https://www.instagram.com/reel/CuPDDfUxOGZ/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==");
     }
       
