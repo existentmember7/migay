@@ -94,8 +94,8 @@ export default function About() {
             <label>
                 <input
                 type="checkbox"
-                checked={checked}
-                onChange={handleChange}
+                checked={checked_1}
+                onChange={handleChange_1}
                 />
                 Yes
             </label>
