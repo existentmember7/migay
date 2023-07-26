@@ -46,16 +46,16 @@ export default function About() {
         setChecked_9(!checked_9);
     };
       
-    function handleSubmit(e) {
-        e.preventDefault();
-        fetch("/", {
-          method: "POST",
-          headers: { "Content-Type": "application/x-www-form-urlencoded" },
-          body: encode({ "form-name": "contact", name, email, message }),
-        })
-          .then(() => alert("Message sent!"))
-          .catch((error) => alert(error));
-        }
+    // function handleSubmit(e) {
+    //     e.preventDefault();
+    //     fetch("/", {
+    //       method: "POST",
+    //       headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    //       body: encode({ "form-name": "contact", name, email, message }),
+    //     })
+    //       .then(() => alert("Message sent!"))
+    //       .catch((error) => alert(error));
+    //     }
 
     
   return (
@@ -90,7 +90,7 @@ export default function About() {
       <div className="container mx-auto flex px-10 py-20 md:flex-row flex-col items-center">
         <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">
             Questions:
-        </h1>
+        </h1><br />
         <h1 className="text-base sm:text-4xl text-3xl mb-4 font-medium text-white">
             1. Have you ever had any same-sex fantasies or thoughts?<br /><br />
                 <label>
