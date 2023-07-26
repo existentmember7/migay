@@ -28,6 +28,14 @@ export default function About() {
     const [checked_9, setChecked_9] = React.useState(false);
     const [checked_10, setChecked_10] = React.useState(false);
 
+    const [checked_11, setChecked_11] = React.useState(false);
+    const [checked_22, setChecked_22] = React.useState(false);
+    const [checked_33, setChecked_33] = React.useState(false);
+    const [checked_44, setChecked_44] = React.useState(false);
+    const [checked_55, setChecked_55] = React.useState(false);
+    const [checked_66, setChecked_66] = React.useState(false);
+    const [checked_77, setChecked_77] = React.useState(false);
+
     const handleChange_1 = () => {
         setChecked_1(!checked_1);
       };
@@ -59,6 +67,28 @@ export default function About() {
         setChecked_10(!checked_10);
     };
 
+    const handleChange_11 = () => {
+        setChecked_11(!checked_10);
+    };
+    const handleChange_22 = () => {
+        setChecked_22(!checked_10);
+    };
+    const handleChange_33 = () => {
+        setChecked_33(!checked_10);
+    };
+    const handleChange_44 = () => {
+        setChecked_44(!checked_10);
+    };
+    const handleChange_55 = () => {
+        setChecked_55(!checked_10);
+    };
+    const handleChange_66 = () => {
+        setChecked_66(!checked_10);
+    };
+    const handleChange_77 = () => {
+        setChecked_77(!checked_10);
+    };
+
 
     function show_result(){
         setClickme("Hey " + name + ", you are " + score.toString() + "% gay! Click me for more infomation!");
@@ -77,7 +107,7 @@ export default function About() {
                 if((checked_8+checked_9+checked_10) == 3){
                     setScore(100);
                 }else{
-                    if (checked_1+checked_2+checked_3+checked_4+checked_5+checked_6+checked_7 == 0){
+                    if (checked_1+checked_2+checked_3+checked_4+checked_5+checked_6+checked_7+checked_11+checked_22+checked_33+checked_44+checked_55+checked_66+checked_77 == 0){
                         setScore(Math.floor(Math.random()*20));
                     }else{
                         setScore((3 + checked_1+checked_2+checked_3+checked_4+checked_5+checked_6+checked_7)*100/10);
@@ -133,6 +163,8 @@ export default function About() {
                     &nbsp;&nbsp;
                     <input
                     type="checkbox"
+                    checked={checked_11}
+                    onChange={handleChange_11}
                     />
                     &nbsp;&nbsp;No
                 </label>
@@ -151,6 +183,8 @@ export default function About() {
                     &nbsp;&nbsp;
                     <input
                     type="checkbox"
+                    checked={checked_22}
+                    onChange={handleChange_22}
                     />
                     &nbsp;&nbsp;No
                 </label>
@@ -169,6 +203,8 @@ export default function About() {
                     &nbsp;&nbsp;
                     <input
                     type="checkbox"
+                    checked={checked_33}
+                    onChange={handleChange_33}
                     />
                     &nbsp;&nbsp;No
                 </label>
@@ -186,6 +222,8 @@ export default function About() {
                     &nbsp;&nbsp;
                     <input
                     type="checkbox"
+                    checked={checked_44}
+                    onChange={handleChange_44}
                     />
                     &nbsp;&nbsp;No
                 </label>
@@ -204,6 +242,8 @@ export default function About() {
                     &nbsp;&nbsp;
                     <input
                     type="checkbox"
+                    checked={checked_55}
+                    onChange={handleChange_55}
                     />
                     &nbsp;&nbsp;No
                 </label>
@@ -222,6 +262,8 @@ export default function About() {
                     &nbsp;&nbsp;
                     <input
                     type="checkbox"
+                    checked={checked_66}
+                    onChange={handleChange_66}
                     />
                     &nbsp;&nbsp;No
                 </label>
@@ -240,6 +282,8 @@ export default function About() {
                     &nbsp;&nbsp;
                     <input
                     type="checkbox"
+                    checked={checked_77}
+                    onChange={handleChange_77}
                     />
                     &nbsp;&nbsp;No
                 </label>
