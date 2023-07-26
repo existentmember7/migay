@@ -17,6 +17,7 @@ export default function About() {
     const [checked_7, setChecked_7] = React.useState(false);
     const [checked_8, setChecked_8] = React.useState(false);
     const [checked_9, setChecked_9] = React.useState(false);
+    const [checked_final, setChecked_final] = React.useState(false);
 
     const handleChange_1 = () => {
         setChecked_1(!checked_1);
@@ -45,17 +46,23 @@ export default function About() {
     const handleChange_9 = () => {
         setChecked_9(!checked_9);
     };
+    const handleChange_final = () => {
+        setChecked_final(!checked_final);
+    };
       
-    // function handleSubmit(e) {
-    //     e.preventDefault();
-    //     fetch("/", {
-    //       method: "POST",
-    //       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    //       body: encode({ "form-name": "contact", name, email, message }),
-    //     })
-    //       .then(() => alert("Message sent!"))
-    //       .catch((error) => alert(error));
-    //     }
+    function handleSubmit(e) {
+        e.preventDefault();
+        if (name == "黃子恆" || name == "Tzu-heng Huang"){
+            setChecked_final(true)
+        }
+        // fetch("/", {
+        //   method: "POST",
+        //   headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        //   body: encode({ "form-name": "contact", name, email, message }),
+        // })
+        //   .then(() => alert("Message sent!"))
+        //   .catch((error) => alert(error));
+        // }
 
     
   return (
