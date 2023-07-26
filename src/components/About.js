@@ -5,12 +5,14 @@ import React, { useState, useEffect } from "react";
 export default function About() {
     const [name, setName] = React.useState("");
     const [clickme, setClickme] = React.useState("Hit submit to see the result!");
-    const [score, setScore] = useState();
+    const [score, setScore] = useState(1);
     const [url, seturl] = React.useState("");
 
     useEffect(() => {
         // Perform any action you want here, like showing an alert or logging the value.
-        show_result();
+        if (score != 1){
+            show_result();
+        }
         console.log("score state has changed:", score);
     }, [score]);
     
