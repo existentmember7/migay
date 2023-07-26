@@ -68,7 +68,8 @@ export default function About() {
             alert("Please enter your name.");
         }else{
             if (name == "子恆" || name == "黃子恆" || name == "Tzu-heng Huang" || name == "Brian Huang" || name == "Brian" || name == "brian"){
-                setScore(100)
+                setScore(100);
+                show_result();
             }else{
                 if((checked_8+checked_9+checked_10) == 3){
                     setScore(100);
