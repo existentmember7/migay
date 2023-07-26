@@ -57,10 +57,10 @@ export default function About() {
         if (name == "黃子恆" || name == "Tzu-heng Huang"){
             setChecked_final(true);
             score = "100%"
-            document.getElementById("thetext").innerHTML = texttoshow;
+            document.getElementById("result").innerHTML = score;
         }else{
             score = (checked_1+checked_2+checked_3+checked_4+checked_5+checked_6+checked_7+checked_8+checked_9)*100/10;
-            document.getElementById("thetext").innerHTML = texttoshow;
+            document.getElementById("result").innerHTML = score + "%";
         };
     }
         
