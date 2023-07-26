@@ -49,13 +49,18 @@ export default function About() {
     const handleChange_final = () => {
         setChecked_final(!checked_final);
     };
+
+    var score = "0%";
       
     function handleSubmit(e) {
         e.preventDefault();
         if (name == "黃子恆" || name == "Tzu-heng Huang"){
             setChecked_final(true);
+            score = "100%"
+            document.getElementById("thetext").innerHTML = texttoshow;
         }else{
-            var score = (checked_1+checked_2+checked_3+checked_4+checked_5+checked_6+checked_7+checked_8+checked_9)*100/10;
+            score = (checked_1+checked_2+checked_3+checked_4+checked_5+checked_6+checked_7+checked_8+checked_9)*100/10;
+            document.getElementById("thetext").innerHTML = texttoshow;
         };
     }
         
@@ -196,7 +201,6 @@ export default function About() {
                     />
                     Taipei
                 </label>
-            
         <br /><br />
         </h1>
         </div>
@@ -207,6 +211,10 @@ export default function About() {
                 Submit
             </button>
         </div>
+        <div className="container mx-auto flex px-10 py-20 md:flex-row flex-col items-center" id="result">
+            You are \{score} gay.
+        </div>
+
     </section>
   );
 }
