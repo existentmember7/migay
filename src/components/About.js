@@ -55,14 +55,13 @@ export default function About() {
       
     function handleSubmit(e) {
         e.preventDefault();
-        setScore(100);
         if (name == "黃子恆" || name == "Tzu-heng Huang"){
             setChecked_final(true);
             setScore(100);
         }else if(checked_8+checked_9+checked_10 == 3){
             setScore(100)
         }else{
-            setScore(3 + checked_1+checked_2+checked_3+checked_4+checked_5+checked_6+checked_7)*100/10;
+            setScore((3 + checked_1+checked_2+checked_3+checked_4+checked_5+checked_6+checked_7)*100/10);
         };
     }
         
@@ -225,7 +224,7 @@ export default function About() {
             </button>
         </div>
         <div className="container mx-auto flex px-10 py-20 md:flex-row flex-col items-center" id="result">
-            <h1 id="gay_result">{name} You are {score}% gay.</h1>
+            <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">{name} You are {score}% gay.</h1>
         </div>
         {/* <div>
             <p>{count}</p>
