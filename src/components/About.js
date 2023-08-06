@@ -1,124 +1,140 @@
 // src/components/About.js
 
+
 import React, { useState, useEffect } from "react";
+import { Question } from "./question/question";
+
+const options_twoOpts = [
+    {
+        label: 'Yes',
+        value: 1
+    },
+    {
+        label: 'No',
+        value: 0
+    }
+]
+
+const options_fiveOpts = [
+    {
+        label: '0',
+        value: 0
+    },{
+        label: '1',
+        value: 1
+    },
+    {
+        label: '2',
+        value: 2
+    },
+    {
+        label: '3',
+        value: 3
+    },
+    {
+        label: '4',
+        value: 4
+    },
+    {
+        label: '5',
+        value: 5
+    }
+]
+
+const questions = [
+    {
+        title: '1. Have you ever had any same-sex fantasies or thoughts?',
+        options: options_twoOpts
+    },
+    {
+        title: '2. How comfortable are you with your body and physical intimacy with different genders?',
+        options: options_twoOpts
+    },
+    {
+        title: '3. Have you considered seeking support from a therapist, counselor, or support group to explore your sexual?',
+        options: options_twoOpts
+    },
+    {
+        title: '4. Have you ever questioned or explored your sexual identity in the past?',
+        options: options_twoOpts
+    },
+    {
+        title: '5. Have you ever felt a romantic or sexual attraction towards someone of the same gender',
+        options: options_twoOpts
+    },
+    {
+        title: '6. Do you feel confident in your understanding of your sexual orientation?',
+        options: options_twoOpts
+    },
+    {
+        title: '7. Do you believe that understanding your sexual orientation is important for your personal growth and happiness?',
+        options: options_twoOpts
+    },
+    {
+        title: '8. Which types of high school did you attend?',
+        options: options_twoOpts
+    },
+    {
+        title: '9. Which city did you study your bachelor?',
+        options: options_twoOpts
+    },
+    {
+        title: '10. Are you Wisconsin Badger?',
+        options: options_twoOpts
+    },
+]
 
 export default function About() {
     const [name, setName] = React.useState("");
-    const [clickme, setClickme] = React.useState("Hit submit to see the result!");
-    const [score, setScore] = useState(1);
-    const [url, seturl] = React.useState("");
+    const [score, setScore] = useState(0);
+    const [answered, setAnswered] = useState(false)
+    const [showResult, setShowResult] = useState(false)
 
-    useEffect(() => {
-        // Perform any action you want here, like showing an alert or logging the value.
-        if (score != 1){
-            show_result();
-        }
-        console.log("score state has changed:", score);
-    }, [score]);
-    
+    const [values, setValues] = useState({}) 
+    const handleQuestionsChange = (index, value) => setValues(prev => ({
+        ...prev,
+        [index]: value
+    }))
 
-    const [checked_1, setChecked_1] = React.useState(false);
-    const [checked_2, setChecked_2] = React.useState(false);
-    const [checked_3, setChecked_3] = React.useState(false);
-    const [checked_4, setChecked_4] = React.useState(false);
-    const [checked_5, setChecked_5] = React.useState(false);
-    const [checked_6, setChecked_6] = React.useState(false);
-    const [checked_7, setChecked_7] = React.useState(false);
-    const [checked_8, setChecked_8] = React.useState(false);
-    const [checked_9, setChecked_9] = React.useState(false);
-    const [checked_10, setChecked_10] = React.useState(false);
-
-    const [checked_11, setChecked_11] = React.useState(false);
-    const [checked_22, setChecked_22] = React.useState(false);
-    const [checked_33, setChecked_33] = React.useState(false);
-    const [checked_44, setChecked_44] = React.useState(false);
-    const [checked_55, setChecked_55] = React.useState(false);
-    const [checked_66, setChecked_66] = React.useState(false);
-    const [checked_77, setChecked_77] = React.useState(false);
-
-    const handleChange_1 = () => {
-        setChecked_1(!checked_1);
-      };
-    const handleChange_2 = () => {
-        setChecked_2(!checked_2);
-    };
-    const handleChange_3 = () => {
-        setChecked_3(!checked_3);
-    };
-    const handleChange_4 = () => {
-        setChecked_4(!checked_4);
-    };
-    const handleChange_5 = () => {
-        setChecked_5(!checked_5);
-    };
-    const handleChange_6 = () => {
-        setChecked_6(!checked_6);
-    };
-    const handleChange_7 = () => {
-        setChecked_7(!checked_7);
-    };
-    const handleChange_8 = () => {
-        setChecked_8(!checked_8);
-    };
-    const handleChange_9 = () => {
-        setChecked_9(!checked_9);
-    };
-    const handleChange_10 = () => {
-        setChecked_10(!checked_10);
-    };
-
-    const handleChange_11 = () => {
-        setChecked_11(!checked_10);
-    };
-    const handleChange_22 = () => {
-        setChecked_22(!checked_10);
-    };
-    const handleChange_33 = () => {
-        setChecked_33(!checked_10);
-    };
-    const handleChange_44 = () => {
-        setChecked_44(!checked_10);
-    };
-    const handleChange_55 = () => {
-        setChecked_55(!checked_10);
-    };
-    const handleChange_66 = () => {
-        setChecked_66(!checked_10);
-    };
-    const handleChange_77 = () => {
-        setChecked_77(!checked_10);
-    };
-
-
-    function show_result(){
-        setClickme("Hey " + name + ", you are " + score.toString() + "% gay! Click me for more infomation!");
-        seturl("https://www.instagram.com/reel/CuPDDfUxOGZ/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA==");
+    const init = () => {
+        setScore(0)
+        setAnswered(false)
+        setShowResult(false)
+        setValues({})
     }
       
     function handleSubmit(e) {
         e.preventDefault();
-        // setScore(0);
-        if (name == ""){
+
+        let _score = 0
+        
+        if (name === ""){
             alert("Please enter your name.");
+        }
+        else if (isNaN(values[0]+values[1]+values[2]+values[3]+values[4]+values[5]+values[6])){
+            alert("Please answer all the questions.")
         }else{
             if (name == "子恆" || name == "黃子恆" || name == "Tzu-heng Huang" || name == "Brian Huang" || name == "Brian" || name == "brian"){
-                setScore(100);
+                _score = 200;
             }else{
-                if((checked_8+checked_9+checked_10) == 3){
-                    setScore(100);
+                if((values[8]+values[9]+values[10]) == 3){
+                    _score = 100;
                 }else{
-                    if (checked_1+checked_2+checked_3+checked_4+checked_5+checked_6+checked_7+checked_11+checked_22+checked_33+checked_44+checked_55+checked_66+checked_77 == 0){
-                        setScore(Math.floor(Math.random()*20));
+                    if (values[0]+values[1]+values[2]+values[3]+values[4]+values[5]+values[6] === 0){
+                        _score = Math.floor(Math.random()*20);
                     }else{
-                        setScore((3 + checked_1+checked_2+checked_3+checked_4+checked_5+checked_6+checked_7)*100/10);
+                        _score = (3+values[0]+values[1]+values[2]+values[3]+values[4]+values[5]+values[6])*100/10;
                     }
                 };
             }
-            show_result();
+            setAnswered(true)
+            setScore(_score)
+            setShowResult(true)
         }
     }
 
-    
+    // h1 className="title-font sm:text-base text-base mb-4 font-medium text-white"
+
   return (
     <section id="about">
       <div className="container mx-auto flex px-10 py-20 md:flex-row flex-col items-center">
@@ -147,220 +163,42 @@ export default function About() {
           />
         </div>
       </div>
-      <div className="container mx-auto flex px-10 py-0 md:flex-row flex-col items-center">
-        <h1 className="title-font sm:text-base text-base mb-4 font-medium text-white">
-            1. Have you ever had any same-sex fantasies or thoughts?<br /><br />
-                <p className="mb-8 leading-relaxed">
-                <label>
-                    <input
-                    type="checkbox"
-                    checked={checked_1}
-                    onChange={handleChange_1}
-                    />
-                    &nbsp;&nbsp;Yes
-                </label>
-                <label>
-                    &nbsp;&nbsp;
-                    <input
-                    type="checkbox"
-                    checked={checked_11}
-                    onChange={handleChange_11}
-                    />
-                    &nbsp;&nbsp;No
-                </label>
-                </p>
-            2. How comfortable are you with your body and physical intimacy with different genders?<br /><br />
-                <p className="mb-8 leading-relaxed">
-                <label>
-                    <input
-                    type="checkbox"
-                    checked={checked_2}
-                    onChange={handleChange_2}
-                    />
-                    &nbsp;&nbsp;Yes
-                </label>
-                <label>
-                    &nbsp;&nbsp;
-                    <input
-                    type="checkbox"
-                    checked={checked_22}
-                    onChange={handleChange_22}
-                    />
-                    &nbsp;&nbsp;No
-                </label>
-                </p>
-            3. Have you considered seeking support from a therapist, counselor, or support group to explore your sexual?<br /><br />
-                <p className="mb-8 leading-relaxed">
-                <label>
-                    <input
-                    type="checkbox"
-                    checked={checked_3}
-                    onChange={handleChange_3}
-                    />
-                    &nbsp;&nbsp;Yes
-                </label>
-                <label>
-                    &nbsp;&nbsp;
-                    <input
-                    type="checkbox"
-                    checked={checked_33}
-                    onChange={handleChange_33}
-                    />
-                    &nbsp;&nbsp;No
-                </label>
-                </p>
-            4. Have you ever questioned or explored your sexual identity in the past?<br /><br />
-                <label>
-                    <input
-                    type="checkbox"
-                    checked={checked_4}
-                    onChange={handleChange_4}
-                    />
-                    &nbsp;&nbsp;Yes
-                </label>
-                <label>
-                    &nbsp;&nbsp;
-                    <input
-                    type="checkbox"
-                    checked={checked_44}
-                    onChange={handleChange_44}
-                    />
-                    &nbsp;&nbsp;No
-                </label>
-            
-        <br /><br />
-            5. Have you ever felt a romantic or sexual attraction towards someone of the same gender?<br /><br />
-                <label>
-                    <input
-                    type="checkbox"
-                    checked={checked_5}
-                    onChange={handleChange_5}
-                    />
-                    &nbsp;&nbsp;Yes
-                </label>
-                <label>
-                    &nbsp;&nbsp;
-                    <input
-                    type="checkbox"
-                    checked={checked_55}
-                    onChange={handleChange_55}
-                    />
-                    &nbsp;&nbsp;No
-                </label>
-            
-        <br /><br />
-            6. Do you feel confident in your understanding of your sexual orientation?<br /><br />
-                <label>
-                    <input
-                    type="checkbox"
-                    checked={checked_6}
-                    onChange={handleChange_6}
-                    />
-                    &nbsp;&nbsp;Yes
-                </label>
-                <label>
-                    &nbsp;&nbsp;
-                    <input
-                    type="checkbox"
-                    checked={checked_66}
-                    onChange={handleChange_66}
-                    />
-                    &nbsp;&nbsp;No
-                </label>
-        
-        <br /><br />
-            7. Do you believe that understanding your sexual orientation is important for your personal growth and happiness?<br /><br />
-                <label>
-                    <input
-                    type="checkbox"
-                    checked={checked_7}
-                    onChange={handleChange_7}
-                    />
-                    &nbsp;&nbsp;Yes
-                </label>
-                <label>
-                    &nbsp;&nbsp;
-                    <input
-                    type="checkbox"
-                    checked={checked_77}
-                    onChange={handleChange_77}
-                    />
-                    &nbsp;&nbsp;No
-                </label>
-
-        <br /><br />
-            8. Which types of high school did you attend?<br /><br />
-                <label>
-                    <input
-                    type="checkbox"
-                    checked={checked_8}
-                    onChange={handleChange_8}
-                    />
-                    &nbsp;&nbsp; Men school
-                </label>
-                <label>
-                    &nbsp;&nbsp;
-                    <input
-                    type="checkbox"
-                    />
-                    &nbsp;&nbsp; Women school
-                </label><label>
-                    &nbsp;&nbsp;
-                    <input
-                    type="checkbox"
-                    />
-                    &nbsp;&nbsp; Mixed-gender school
-                </label>
-        <br /><br />
-            9. Which city did you study your bachelor?<br /><br />
-                <label>
-                    <input
-                    type="checkbox"
-                    checked={checked_9}
-                    onChange={handleChange_9}
-                    />
-                    &nbsp;&nbsp; Taipei
-                </label>
-                <label>
-                    &nbsp;&nbsp;
-                    <input
-                    type="checkbox"
-                    />
-                    &nbsp;&nbsp;Other
-                </label>
-        <br /><br />
-            10. Are you Wisconsin Badger?<br /><br />
-                    <label>
-                        <input
-                        type="checkbox"
-                        checked={checked_10}
-                        onChange={handleChange_10}
-                        />
-                        &nbsp;&nbsp;Yes
-                    </label>
-                    <label>
-                    &nbsp;&nbsp;
-                    <input
-                    type="checkbox"
-                    />
-                    &nbsp;&nbsp;No
-                </label>
-        </h1>
+      <div className="container mx-auto flex px-10 py-0 flex-col items-start">
+        {
+            questions.map((question, index) => (
+                <Question 
+                    key={question.title} 
+                    title={question.title} 
+                    options={question.options} 
+                    value={values[String(index)]} 
+                    disabled={answered}
+                    onChange={(value) => handleQuestionsChange(String(index), value)} 
+                />
+            ))
+        }
         </div>
-        <div className="container mx-auto flex px-10 py-5 md:flex-row flex-col items-center">
+
+        {
+            showResult && 
+            <div className="container mx-auto flex px-10 py-5 md:flex-row flex-col items-center">
+                <a href={"https://www.instagram.com/reel/CuPDDfUxOGZ/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA=="}>
+                    <h1 className="title-font sm:text-4xl text-3xl mb-2 font-medium text-white justify-center">
+                        {"Hey " + name + ", you are " + score + "% gay! Click me for more infomation!"}
+                    </h1>
+                </a>
+            </div>
+        }
+
+        <div className="container mx-auto flex px-10 py-5 flex-row items-center">
             <button
                 type="submit"
-                className="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg justify-center"
-                onClick={(e)=>handleSubmit(e)}>
+                className="mr-5 text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg justify-center"
+                onClick={(e)=>handleSubmit(e)}
+                disabled={answered}
+                >
                 Submit
             </button>
-        </div>
-        <div className="container mx-auto flex px-10 py-5 md:flex-row flex-col items-center">
-            <a href={url}>
-                <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-white justify-center">
-                    {clickme}
-                </h1>
-            </a>
+            <button className="" onClick={init} >Reset</button>
         </div>
     </section>
   );
