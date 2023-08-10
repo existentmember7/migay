@@ -15,6 +15,27 @@ const options_twoOpts = [
     }
 ]
 
+const options_other1Opts = [
+    {
+        label: 'Taipei',
+        value: 1
+    },
+    {
+        label: 'Others',
+        value: 0
+    }
+]
+const options_other2Opts = [
+    {
+        label: 'Same-gender',
+        value: 1
+    },
+    {
+        label: 'Mix-gender',
+        value: 0
+    }
+]
+
 const options_fiveOpts = [
     {
         label: '0',
@@ -72,11 +93,11 @@ const questions = [
     },
     {
         title: '8. Which types of high school did you attend?',
-        options: options_twoOpts
+        options: options_other2Opts
     },
     {
         title: '9. Which city did you study your bachelor?',
-        options: options_twoOpts
+        options: options_other1Opts
     },
     {
         title: '10. Are you Wisconsin Badger?',
