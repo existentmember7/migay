@@ -204,7 +204,7 @@ export default function About() {
             <div className="container mx-auto flex px-10 py-5 md:flex-row flex-col items-center">
                 <a href={"https://www.instagram.com/reel/CuPDDfUxOGZ/?utm_source=ig_web_copy_link&igshid=MzRlODBiNWFlZA=="}>
                     <h1 className="title-font sm:text-4xl text-3xl mb-2 font-medium text-white justify-center">
-                        {"Hey " + name + ", you are " + score + "% gay! Click me for more infomation!"}
+                        {"Hey " + name + ", you are " + score + "% gay!"} <u>{"Click me for more infomation!"}</u>
                     </h1>
                 </a>
             </div>
